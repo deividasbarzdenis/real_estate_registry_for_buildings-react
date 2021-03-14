@@ -4,7 +4,6 @@ import DomainIcon from '@material-ui/icons/Domain';
 import {Avatar, Button, Container, CssBaseline, Grid, makeStyles, TextField, Typography} from "@material-ui/core";
 import {useHistory} from "react-router";
 import {addProperty} from "../../api/property";
-import PropsState from "../../components/PropsState";
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -104,7 +103,7 @@ const NewProperty = () => {
                     } = props
                     return (
                         <>
-                            <PropsState {...props}/>
+                            {/*<PropsState {...props}/>*/}
                             <Container component="main" maxWidth="sm" className={classes.wrapper}>
                                 <CssBaseline/>
                                 <div className={classes.paper}>

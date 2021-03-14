@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '2rem',
     },
     colorTitle: {
-        color: '#5AFF3D',
+        color: '#3591ED',
     },
     headerButtons: {
         color: "red"
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
     btColor: {
         fontFamily: 'Nunito',
-        color: "#5AFF3D",
+        color: "#3591ED",
         fontSize: '0.95rem',
         '&:hover': {
             backgroundColor: 'rgba(215, 138, 248,  0.75)',

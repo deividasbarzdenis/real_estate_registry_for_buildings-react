@@ -17,13 +17,20 @@ const useStyles = makeStyles((theme) => ({
     },
     table: {
         minWidth: 500,
+
     },
     head: {
+        fontFamily: 'Nunito',
         fontWeight: "bold",
+        color: '#3591ED',
     },
     topTable: {
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    }
+    },
+    row: {
+        fontFamily: 'Nunito',
+        color: '#3591ED',
+    },
 }));
 const PropertyTable = ({properties, handleDeleteClick}) => {
     const classes = useStyles();
@@ -49,19 +56,19 @@ const PropertyTable = ({properties, handleDeleteClick}) => {
                         {
                             properties.map(rec => (
                                 <TableRow key={rec.id} hover>
-                                    <TableCell align="center">{rec.id}</TableCell>
-                                    <TableCell align="center">{rec.description}</TableCell>
-                                    <TableCell align="center">{rec.city}</TableCell>
-                                    <TableCell align="center">{rec.street}</TableCell>
-                                    <TableCell align="center">{rec.houseNumber}</TableCell>
-                                    <TableCell align="center">{rec.area}</TableCell>
-                                    <TableCell align="center">{rec.value}</TableCell>
-                                    <TableCell align="center">{rec.valueWithTax}</TableCell>
-                                    <TableCell align="center">{rec.type}</TableCell>
-                                    <TableCell align="center">
+                                    <TableCell align="center" className={classes.row}>{rec.id}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.description}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.city}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.street}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.houseNumber}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.area}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.value}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.valueWithTax}</TableCell>
+                                    <TableCell align="center" className={classes.row}>{rec.type}</TableCell>
+                                    <TableCell align="center" className={classes.row}>
                                         <Button
                                             variant="outlined"
-                                            color="secondary"
+                                            color="primary"
                                             size="small"
                                             onClick={() => handleDeleteClick(rec.id)}
                                         >Delete</Button>

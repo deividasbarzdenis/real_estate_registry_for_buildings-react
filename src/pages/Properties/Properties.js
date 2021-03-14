@@ -1,9 +1,17 @@
 import {useEffect, useState} from "react";
 import {deleteProperty, getAllProperties} from "../../api/property";
-import {Container, Grid, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import PropertyTable from "./PropertiesTable";
 
+const useStyles = makeStyles(() =>({
+    text: {
+        fontFamily: 'Nunito',
+        fontWeight: "bold",
+        color: '#3591ED',
+    },
+}))
 const Properties = () => {
+    const classes = useStyles();
     const [properties, setProperties] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
@@ -36,7 +44,7 @@ const Properties = () => {
         <Container component="main">
             <Container container justify="center">
                 <Grid item xs={12} align="center" >
-                    <Typography component="h1" variant="h5" >All Properties</Typography>
+                    <Typography component="h1" variant="h5" className={classes.text}>All Properties</Typography>
                 </Grid>
                 <Grid item xs={12}>
                     {
